@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Equilibrium - Eventos e Eco Center</title>
-    <meta name="description" content="Onde a natureza encontra a sofisticação. Casamentos, Eventos e Hospedagem.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrium - Eventos e Eco Center</title>
+    <meta name="description" content="Onde a natureza encontra a sofisticação. Casamentos, Eventos e Hospedagem em Extremoz/RN.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +57,7 @@
         a { text-decoration: none; transition: all 0.4s ease; }
         img { width: 100%; height: 100%; display: block; object-fit: cover; }
 
-        /* --- ELEMENTOS DE UI --- */
+        /* --- UI ELEMENTS --- */
         .btn {
             display: inline-block;
             padding: 16px 40px;
@@ -89,7 +90,7 @@
         .section-header span { display: block; font-family: var(--font-body); color: var(--secondary-color); text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.9rem; margin-bottom: 1rem; }
         .divider { width: 1px; height: 50px; background-color: var(--secondary-color); margin: 0 auto 20px; }
 
-        /* --- HEADER & NAVEGAÇÃO --- */
+        /* --- HEADER --- */
         header {
             position: fixed; top: 0; width: 100%; height: 80px;
             padding: 0 5%;
@@ -109,7 +110,6 @@
         }
         nav a:hover { color: var(--secondary-color); border-bottom-color: var(--secondary-color); }
 
-        /* Botão Mobile (Hambúrguer) */
         .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; color: var(--primary-color); }
 
         /* --- HERO --- */
@@ -117,7 +117,7 @@
             height: 100vh; position: relative; display: flex; align-items: center; justify-content: center;
             background: url('https://i.postimg.cc/85z63VVg/Copy-of-IMG-1967.avif') center/cover no-repeat fixed;
         }
-        .hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); } /* Máscara escura */
+        .hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); }
         
         .hero-content {
             position: relative; z-index: 2; text-align: center; color: #fff; padding: 0 20px;
@@ -128,7 +128,7 @@
 
         @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* --- SEÇÃO CASAMENTOS --- */
+        /* --- CASAMENTOS --- */
         .weddings-section { padding: var(--padding-section); background-color: var(--bg-light); }
         .overlap-grid { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 4rem; margin-bottom: 4rem; }
         
@@ -153,10 +153,10 @@
         .space-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
         .space-grid .g-item { height: 250px; }
 
-        /* --- SEÇÃO O ESPAÇO --- */
+        /* --- O ESPAÇO --- */
         .space-section { background-color: var(--bg-offwhite); padding: var(--padding-section); }
 
-        /* --- SEÇÃO HOSPEDAGEM --- */
+        /* --- HOSPEDAGEM --- */
         .promo-box {
             background-color: #fff; border: 1px solid #eee; max-width: 900px; margin: 0 auto;
             padding: 4rem 2rem; text-align: center; border-top: 4px solid var(--secondary-color);
@@ -167,20 +167,23 @@
         .icon-box i { font-size: 1.8rem; color: var(--tertiary-color); margin-bottom: 0.5rem; }
         .icon-box span { display: block; font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.1em; }
 
-        /* --- SEÇÃO CONTATO (Formulário) --- */
+        /* --- CONTATO --- */
         .contact-section { padding: var(--padding-section); background-color: var(--bg-light); }
         .contact-container {
             max-width: 800px; margin: 0 auto;
             display: grid; grid-template-columns: 1fr; gap: 2rem;
         }
+        .direct-email {
+            text-align: center; margin-bottom: 2rem; font-size: 1rem; color: var(--primary-color);
+        }
+        .direct-email a { color: var(--secondary-color); font-weight: 700; border-bottom: 1px solid var(--secondary-color); }
         
         form { display: flex; flex-direction: column; gap: 1.5rem; }
         
         .form-group input, .form-group textarea {
             width: 100%; padding: 15px;
             border: 1px solid #ddd; background: #fdfdfd;
-            font-family: var(--font-body); font-size: 1rem;
-            color: var(--primary-color);
+            font-family: var(--font-body); font-size: 1rem; color: var(--primary-color);
             transition: 0.3s;
         }
         .form-group input:focus, .form-group textarea:focus {
@@ -197,6 +200,8 @@
             display: flex; align-items: center; justify-content: center; color: #fff; transition: 0.3s;
         }
         .socials a:hover { border-color: var(--secondary-color); color: var(--secondary-color); }
+        .footer-address { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; color: #ddd; }
+        .footer-ref { font-size: 0.85rem; color: var(--secondary-color); opacity: 0.9; margin-bottom: 2rem; letter-spacing: 0.05em; }
         .copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; font-size: 0.75rem; color: #777; }
 
         /* --- LIGHTBOX --- */
@@ -209,32 +214,23 @@
         .lightbox img { max-width: 90%; max-height: 90%; border: 2px solid var(--secondary-color); }
         .close-lb { position: absolute; top: 30px; right: 30px; color: #fff; font-size: 2rem; cursor: pointer; }
 
-        /* --- RESPONSIVIDADE (Correção Mobile) --- */
-        @media (max-width: 1024px) { /* Aumentei para pegar tablets e celulares grandes */
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 1024px) { 
             .hero h1 { font-size: 2.8rem; }
-            .section-header h2 { font-size: 2rem; }
             .overlap-grid { grid-template-columns: 1fr; gap: 0; }
             .overlap-image { order: 1; width: 100%; height: 350px; margin-bottom: 3rem; box-shadow: none; }
             .overlap-text { order: 2; text-align: center; padding: 0 1rem; }
-            .overlap-text h2 { font-size: 2.2rem; }
             .features-grid { text-align: left; max-width: 350px; margin: 2rem auto; }
 
-            /* Menu Mobile Corrigido */
             .mobile-menu-btn { display: block; z-index: 1001; }
             
             nav {
                 position: fixed; top: 0; right: 0;
-                width: 100%; height: 100vh;
-                background: #ffffff;
-                display: flex; flex-direction: column;
-                justify-content: center; align-items: center;
-                transform: translateX(100%); /* Escondido por padrão */
-                transition: transform 0.3s ease-in-out;
-                z-index: 999;
+                width: 100%; height: 100vh; background: #ffffff;
+                display: flex; flex-direction: column; justify-content: center; align-items: center;
+                transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 999;
             }
-            
-            nav.nav-active { transform: translateX(0); /* Visível quando ativo */ }
-            
+            nav.nav-active { transform: translateX(0); }
             nav ul { flex-direction: column; gap: 30px; text-align: center; }
             nav a { font-size: 1.2rem; border: none; }
         }
@@ -380,14 +376,15 @@
 
         <div class="promo-box">
             <h3>Conforto e Privacidade</h3>
-            <p style="margin: 1rem auto; max-width: 600px;">
-                Desfrute de dias tranquilos em nossa casa exclusiva. Locação segura e prática via Airbnb.
+            <p style="margin: 1rem auto; max-width: 650px;">
+                Desfrute de dias tranquilos em nossa hospedagem estilo pousada.
+                <br>São <strong>4 acomodações independentes</strong>: 2 quartos de casal e 2 quartos coletivos com beliches.
             </p>
 
             <div class="icon-row">
-                <div class="icon-box"><i class="fas fa-wifi"></i><span>Wi-Fi Fibra</span></div>
+                <div class="icon-box"><i class="fas fa-wifi"></i><span>Wi-Fi</span></div>
                 <div class="icon-box"><i class="fas fa-swimming-pool"></i><span>Piscina</span></div>
-                <div class="icon-box"><i class="fas fa-bed"></i><span>Suítes</span></div>
+                <div class="icon-box"><i class="fas fa-bed"></i><span>4 Quartos</span></div>
                 <div class="icon-box"><i class="fas fa-parking"></i><span>Vagas</span></div>
             </div>
 
@@ -402,13 +399,19 @@
             <span>Fale Conosco</span>
             <h2>Entre em Contato</h2>
             <div class="divider"></div>
-            <p>Envie sua mensagem diretamente para nosso e-mail.</p>
+            <p>Preencha o formulário ou envie uma mensagem direta.</p>
         </div>
 
         <div class="contact-container">
+            <p class="direct-email">
+                Prefere enviar um e-mail? <br>
+                <a href="mailto:equilibrium.ecocenter@gmail.com">equilibrium.ecocenter@gmail.com</a>
+            </p>
+
             <form action="https://formsubmit.co/equilibrium.ecocenter@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://equilibrium-ecocenter.com/obrigado.html"> <input type="hidden" name="_subject" value="Novo contato via Site!">
+                <input type="hidden" name="_next" value="https://equilibrium-ecocenter.com/obrigado.html">
+                <input type="hidden" name="_subject" value="Novo contato via Site!">
 
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Seu Nome" required>
@@ -437,9 +440,9 @@
             <a href="https://wa.me/5584999601080" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
 
-        <p style="opacity: 0.6; font-size: 0.9rem;">
-            Rua Projetada, 123 - Nísia Floresta, RN<br>
-            equilibrium.ecocenter@gmail.com
+        <p class="footer-address">
+            Rua Paulo Freire, 3415 - Portal do Sol, Extremoz - RN<br>
+            <span class="footer-ref">A 5 min de Barra do Rio | < 10 min de Genipabu</span>
         </p>
 
         <div class="copy">
@@ -448,13 +451,13 @@
     </footer>
 
     <script>
-        // Menu Mobile Corrigido
+        // Menu Mobile
         function toggleMenu() {
             const nav = document.getElementById('navbar');
             nav.classList.toggle('nav-active');
         }
 
-        // Lightbox (Zoom Fotos)
+        // Lightbox
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
