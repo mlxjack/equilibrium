@@ -214,6 +214,39 @@
         .lightbox img { max-width: 90%; max-height: 90%; border: 2px solid var(--secondary-color); }
         .close-lb { position: absolute; top: 30px; right: 30px; color: #fff; font-size: 2rem; cursor: pointer; }
 
+        /* --- WHATSAPP FLUTUANTE --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.1);
+            color: #FFF;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
         /* --- RESPONSIVIDADE --- */
         @media (max-width: 1024px) { 
             .hero h1 { font-size: 2.8rem; }
@@ -241,6 +274,14 @@
             .clean-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .g-item { height: 180px; }
             .btn { width: 100%; }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
 </head>
@@ -304,7 +345,7 @@
                 </div>
 
                 <br><br>
-                <a href="https://wa.me/5584999601080" target="_blank" class="btn btn-fill">
+                <a href="https://wa.me/558496239344" target="_blank" class="btn btn-fill">
                     <i class="fab fa-whatsapp"></i> Orçamento
                 </a>
             </div>
@@ -438,7 +479,7 @@
         <div class="socials">
             <a href="https://www.instagram.com/Equilibrium.ecocenter?igsh=YTV5Zzhqb3h0cDlk" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.airbnb.com.br/rooms/1072162785153499029" target="_blank"><i class="fab fa-airbnb"></i></a>
-            <a href="https://wa.me/5584999601080" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/558496239344" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
 
         <p class="footer-address">
@@ -450,6 +491,13 @@
             &copy; 2026 Equilibrium Ecocenter. Todos os direitos reservados.
         </div>
     </footer>
+
+    <a href="https://wa.me/558496239344?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         // Menu Mobile
