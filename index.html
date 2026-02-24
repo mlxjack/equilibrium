@@ -191,6 +191,25 @@
         }
         .form-group textarea { resize: vertical; height: 150px; }
 
+        /* --- MAPA --- */
+        .map-section { 
+            padding: var(--padding-section); 
+            background-color: var(--bg-offwhite); 
+        }
+        .map-container {
+            max-width: 1000px; 
+            margin: 0 auto; 
+            border-top: 4px solid var(--secondary-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            background: #fff;
+            padding: 10px;
+        }
+        .map-container iframe {
+            display: block;
+            border-radius: 2px;
+            width: 100%;
+        }
+
         /* --- FOOTER --- */
         footer { background-color: #000; color: #fff; padding: 80px 5% 40px; text-align: center; }
         .footer-logo { width: 220px; margin-bottom: 2rem; opacity: 0.9; }
@@ -306,6 +325,7 @@
                 <li><a href="#home" onclick="toggleMenu()">Início</a></li>
                 <li><a href="#casamentos" onclick="toggleMenu()">Casamentos</a></li>
                 <li><a href="#espaco" onclick="toggleMenu()">O Espaço</a></li>
+                <li><a href="#localizacao" onclick="toggleMenu()">Localização</a></li>
                 <li><a href="#hospedagem" onclick="toggleMenu()">Hospedagem</a></li>
                 <li><a href="#contato-form" onclick="toggleMenu()" style="color: var(--secondary-color);">Contato</a></li>
             </ul>
@@ -409,6 +429,26 @@
         </div>
     </section>
 
+    <section id="localizacao" class="map-section">
+        <div class="section-header">
+            <span>Como Chegar</span>
+            <h2>Nossa Localização</h2>
+            <div class="divider"></div>
+            <p>Rua Paulo Freire, 3415 - Portal do Sol, Extremoz - RN</p>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://maps.google.com/maps?q=Rua%20Paulo%20Freire,%203415%20-%20Portal%20do%20Sol,%20Extremoz%20-%20RN&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
     <section id="hospedagem" style="padding: 100px 8%; background: #fff;">
         <div class="section-header">
             <span>Stay with us</span>
@@ -488,7 +528,7 @@
         </p>
 
         <div class="copy">
-            &copy; 2026 Equilibrium Ecocenter. Todos os direitos reservados.
+            © 2026 Equilibrium Ecocenter. Todos os direitos reservados.
         </div>
     </footer>
 
